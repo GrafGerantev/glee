@@ -1,0 +1,58 @@
+.nav-user {
+	display: flex;
+	align-items: center;
+
+	&__search {
+		width: 51px;
+		height: 51px;
+		background-color: rgba(#a3bbc8, .2);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 20px;
+	}
+
+	&__box {
+		display: flex;
+		background-color: #fcd7b6;
+		margin-right: 20px;
+		padding: 22px 10px 12px 10px;
+		border-radius: 50px;
+	}
+
+	&__icon {
+		margin: 0 30px;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: -30px;
+			top: -10px;
+			width: 1px;
+			height: 32px;
+			background-color: rgba(#ffffff, .4);
+		}
+
+		&:last-child::after {
+			display: none;
+		}
+	}
+
+	&__num {
+		display: block;
+		position: absolute;
+		right: -8px;
+		top: -9px;
+		width: 16px;
+		height: 16px;
+		background-color: #ffffff;
+		text-align: center;
+		line-height: 16px;
+		border-radius: 50%;
+		@extend %dmsans-400;
+		font-size: 10px;
+	}
+
+}
