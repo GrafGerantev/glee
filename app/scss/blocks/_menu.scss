@@ -1,0 +1,15 @@
+.menu {
+	&__list {
+		display: flex;
+
+		&-item+.menu__list-item {
+			margin-left: 33px;
+		}
+
+		&-link {
+			@extend %rubik-500;
+			font-size: 15px;
+			color: #436372;
+		}
+	}
+}
