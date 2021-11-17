@@ -37,3 +37,34 @@ button {
 	border: none;
 	cursor: pointer;
 }
+
+.link-btn {
+	border: none;
+	padding: 22px 100px 20px 27px;
+	display: inline-block;
+	position: relative;
+	@extend %rubik-500;
+	font-size: 15px;
+
+	&::before {
+		content: "";
+		display: block;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 22px;
+		height: 9px;
+	}
+
+	&--blue {
+		background-color: $accent-color;
+		position: relative;
+		color: #ffffff;
+
+		&::before {
+			background-image: url("../images/icons/arrow-btn.svg");
+		}
+	}
+}
