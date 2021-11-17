@@ -1,0 +1,68 @@
+.top-slider {
+	padding-top: 100px;
+	padding-bottom: 87px;
+	background-color: #fcd7b6;
+
+
+	&__wrapper {
+		max-width: 1330px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+
+	&__item {
+		display: flex !important;
+		justify-content: space-between;
+	}
+
+	&__content {
+		padding-top: 110px;
+		max-width: 460px;
+	}
+
+	&__title {
+		@extend %rubik-500;
+		font-size: 72px;
+		line-height: 72px;
+		color: $default-color;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		@extend %rubik-400;
+		font-size: 18px;
+		line-height: 30px;
+		color: #436372;
+		max-width: 370px;
+		margin-bottom: 36px;
+	}
+
+	& .slick-dots {
+		display: flex;
+		position: absolute;
+		bottom: -45px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		li {
+			padding-left: 10px;
+		}
+
+		li.slick-active {
+			button {
+				background-color: rgba(#ffffff, 1);
+				color: rgba($default-color, 1);
+			}
+		}
+
+		button {
+			width: 30px;
+			height: 30px;
+			background-color: rgba(#ffffff, 0.3);
+			border-radius: 50%;
+			@extend %rubik-500;
+			font-size: 11px;
+			color: rgba($default-color, .3);
+		}
+	}
+}

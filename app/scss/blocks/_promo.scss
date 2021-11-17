@@ -1,0 +1,34 @@
+.promo-bottom {
+	&__items {
+		display: flex;
+	}
+
+	&__item {
+		width: 33.333%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 48px 0;
+		border-right: 1px solid rgba(#243f4d, .1);
+		background-color: rgba($bg-orange, .2);
+	}
+
+	&__img {
+		margin-right: 26px;
+	}
+
+	&__title {
+		@extend %dmsans-700;
+		font-size: 18px;
+		line-height: 1;
+		color: #414141;
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		width: 213px;
+		font-size: 16px;
+		line-height: 25px;
+		color: #585858;
+	}
+}
