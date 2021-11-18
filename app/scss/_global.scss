@@ -28,6 +28,32 @@ body {
 	margin: 0 auto;
 }
 
+.title {
+	@extend %dmsans-700;
+	font-size: 36px;
+	color: $title-color;
+	text-align: center;
+}
+
+.filter {
+	display: flex;
+	justify-content: center;
+	@extend %dmsans-700;
+	font-size: 16px;
+
+	button {
+		color: $filter-btn;
+	}
+
+	&__btn+.filter__btn {
+		margin-left: 30px;
+	}
+
+	.mixitup-control-active {
+		color: $title-color;
+	}
+}
+
 a,
 button {
 	display: block;
@@ -60,11 +86,19 @@ button {
 
 	&--blue {
 		background-color: $accent-color;
-		position: relative;
 		color: #ffffff;
 
 		&::before {
-			background-image: url("../images/icons/arrow-btn.svg");
+			background-image: url("../images/icons/arrow-btn-white.svg");
+		}
+	}
+
+	&--dark {
+		background-color: transparent;
+		color: $btn-link-dark;
+
+		&::before {
+			background-image: url("../images/icons/arrow-btn-dark.svg");
 		}
 	}
 }
