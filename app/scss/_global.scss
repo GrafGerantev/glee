@@ -35,6 +35,12 @@ body {
 	text-align: center;
 }
 
+.title-content {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 47px;
+}
+
 .filter {
 	display: flex;
 	justify-content: center;
@@ -52,6 +58,18 @@ body {
 	.mixitup-control-active {
 		color: $title-color;
 	}
+}
+
+.news {
+	padding: 5px 30px;
+	background-color: $accent-color;
+	border-radius: 50px;
+	display: inline-block;
+	color: #ffffff;
+	@extend %poppins-700;
+	font-size: 14px;
+	line-height: 20px;
+	position: absolute;
 }
 
 a,

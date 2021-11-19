@@ -1,0 +1,51 @@
+.insights-clients {
+	padding-top: 115px;
+
+	&__content {
+		background-color: $client-bg;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		grid-auto-rows: minmax(420px, auto);
+	}
+
+	&__item {
+		background-color: #ffffff;
+		position: relative;
+
+		&-content {
+			padding: 30px 17px 24px 30px;
+		}
+
+
+		&-text {
+			@extend %dmsans-500;
+			font-size: 18px;
+			color: $title-color;
+			padding-bottom: 14px;
+		}
+
+		&-bottom {
+			width: 100%;
+			display: flex;
+			@extend %rubik-400;
+			font-size: 12px;
+			line-height: 30px;
+			text-transform: uppercase;
+			border-top: 1px solid #e0e0e0;
+			padding-top: 16px;
+		}
+
+		&-date {
+			margin-right: 30px;
+		}
+	}
+
+	.news {
+		top: -16px;
+		left: 30px;
+	}
+}

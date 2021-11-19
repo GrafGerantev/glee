@@ -48,6 +48,7 @@ function scripts() {
 	return src([
 			'node_modules/jquery/dist/jquery.js',
 			'node_modules/slick-carousel/slick/slick.js',
+			'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
 			'node_modules/mixitup/dist/mixitup.js',
 			'app/js/main.js'
 		])
