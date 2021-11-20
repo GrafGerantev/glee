@@ -1,23 +1,48 @@
 .insights-clients {
 	padding-top: 115px;
 
-	&__content {
-		background-color: $client-bg;
+
+	&__more {
+		@extend %dmsans-700;
+		font-size: 16px;
+		color: $title-color;
+		padding-right: 25px;
+		position: relative;
+
+		&::after {
+			content: "";
+			background-image: url("../images/icons/chevron.png");
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 7px;
+			height: 12px;
+		}
 	}
 
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
-		grid-auto-rows: minmax(420px, auto);
+		position: relative;
+		z-index: 10;
 	}
 
 	&__item {
+		background-repeat: no-repeat;
+		background-position: top center;
 		background-color: #ffffff;
+		min-height: 420px;
+		padding-bottom: 60px;
 		position: relative;
+		box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
 
 		&-content {
-			padding: 30px 17px 24px 30px;
+			padding: 30px 50px 26px 30px;
+			position: relative;
 		}
 
 
@@ -25,18 +50,29 @@
 			@extend %dmsans-500;
 			font-size: 18px;
 			color: $title-color;
-			padding-bottom: 14px;
+			/* padding-bottom: 24px; */
 		}
 
 		&-bottom {
 			width: 100%;
-			display: flex;
+
 			@extend %rubik-400;
 			font-size: 12px;
 			line-height: 30px;
 			text-transform: uppercase;
+			/* padding: 16px 28px 20px 28px; */
+			padding: 0 30px;
+			position: absolute;
+			bottom: 20px;
+
+		}
+
+		&-info {
+			display: flex;
+			/* padding: 20px 0; */
+			padding-top: 20px;
 			border-top: 1px solid #e0e0e0;
-			padding-top: 16px;
+			width: 100%;
 		}
 
 		&-date {
@@ -47,5 +83,27 @@
 	.news {
 		top: -16px;
 		left: 30px;
+	}
+
+	&__content {
+		background-color: $client-bg;
+		position: relative;
+		margin-top: -188px;
+
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding-bottom: 90px;
+			min-height: 435px;
+		}
+	}
+
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
 	}
 }
