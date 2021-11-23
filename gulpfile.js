@@ -24,7 +24,9 @@ function browsersync() {
 }
 
 function html() {
-	return src('app/html/index.html')
+	return src(['app/html/index.html',
+			'app/html/page.html'
+		])
 		.pipe(fileinclude())
 		.pipe(dest('app/'))
 		.pipe(browserSync.stream())
