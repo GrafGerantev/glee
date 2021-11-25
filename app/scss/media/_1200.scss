@@ -1,0 +1,25 @@
+@media (max-width: 1200px) {
+	.insights-clients {
+		&__items {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__item {
+			max-width: 50%;
+			margin-bottom: 40px;
+		}
+	}
+
+	.about {
+		&-content {
+			&__item {
+				padding-right: 24px;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -120,4 +120,13 @@ button {
 			background-image: url("../images/icons/arrow-btn-dark.svg");
 		}
 	}
+
+	&--team {
+		background-color: $accent-color;
+		color: #ffffff;
+
+		&::before {
+			background-image: url("../images/icons/arrow-btn-team.svg");
+		}
+	}
 }

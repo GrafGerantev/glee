@@ -25,7 +25,10 @@ function browsersync() {
 
 function html() {
 	return src(['app/html/index.html',
-			'app/html/page.html'
+			'app/html/page.html',
+			'app/html/login.html',
+			'app/html/about.html',
+			'app/html/terms.html',
 		])
 		.pipe(fileinclude())
 		.pipe(dest('app/'))

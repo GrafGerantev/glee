@@ -1,0 +1,59 @@
+.terms {
+	padding: 110px 0 30px;
+
+	&__content {
+		margin-bottom: 60px;
+	}
+
+	&__list {
+		list-style-type: none;
+		/* Убираем исходные маркеры */
+		counter-reset: item;
+		/* Обнуляем счетчик списка */
+	}
+
+	&__item {
+		padding-left: 33px;
+		position: relative;
+
+		&:nth-child(-n+9),
+		&:nth-child(n+10) {
+			&::before {
+				position: absolute;
+				left: 0;
+				@extend %rubik-400;
+				color: $default-color;
+				margin-bottom: 23px;
+				line-height: 30px;
+			}
+		}
+
+		&:nth-child(-n+9)::before {
+			content: '0'counter(item);
+			counter-increment: item;
+		}
+
+		&:nth-child(n+10)::before {
+			content: counter(item);
+			counter-increment: item;
+		}
+	}
+
+	&__title {
+		@extend %rubik-500;
+		font-size: 24px;
+		line-height: 40px;
+		margin-bottom: 16px;
+	}
+
+	&__text {
+		@extend %rubik-400;
+		color: $default-color;
+		margin-bottom: 23px;
+		line-height: 30px;
+	}
+}
+
+.terms+section {
+	padding-top: 10px;
+}
