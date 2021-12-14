@@ -21,4 +21,13 @@
 			width: 100%;
 		}
 	}
+
+	.insights-clients__content {
+		margin-top: 0;
+
+		&-wrapper {
+			min-height: auto;
+			padding-top: 77px;
+		}
+	}
 }
