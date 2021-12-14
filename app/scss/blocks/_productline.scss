@@ -3,11 +3,16 @@
 		width: 100%;
 	}
 
+	&__items {
+		margin-bottom: 75px;
+	}
+
 	.products__item-box {
 		display: flex;
 		flex-direction: column;
 		padding: 0 25px;
 	}
+
 
 	.products__item {
 		max-width: 870px;
