@@ -1,6 +1,10 @@
 .product-line {
 	&__content {
 		width: 100%;
+
+		.pagination {
+			justify-content: start;
+		}
 	}
 
 	&__items {
