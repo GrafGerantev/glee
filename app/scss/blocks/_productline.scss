@@ -1,0 +1,141 @@
+.product-line {
+	&__content {
+		width: 100%;
+	}
+
+	.products__item-box {
+		display: flex;
+		flex-direction: column;
+		padding: 0 25px;
+	}
+
+	.products__item {
+		max-width: 870px;
+		width: 100%;
+		height: 500px;
+		box-shadow: none;
+		flex-direction: row;
+		align-items: center;
+		justify-content: start;
+		padding: 0;
+		margin-bottom: 40px;
+
+		.products-hover {
+			opacity: 1;
+			visibility: visible;
+			position: relative;
+			left: 0;
+			top: 0;
+			transform: translate(0, 0);
+			justify-content: start;
+			align-items: flex-start;
+
+
+
+			&__img {
+				width: 50px;
+				height: 50px;
+				border-radius: 0;
+				box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+				&.disabled-hover:hover {
+					background-color: inherit;
+
+					path {
+						fill: $accent-color;
+					}
+				}
+			}
+
+			.products-hover__img+.products-hover__img {
+				margin-left: 10px;
+			}
+
+			.products-hover__img.products-hover__img-cart {
+				margin-left: 0;
+				background-color: $accent-color;
+
+				path {
+					fill: #ffffff;
+				}
+			}
+
+			&__btn {
+				width: 208px;
+				height: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: $accent-color;
+				color: #ffffff;
+				@extend %rubik-400;
+				text-transform: uppercase;
+				font-size: 0;
+				line-height: 30px;
+				border-radius: 5px;
+				letter-spacing: 0.75px;
+				position: absolute;
+				width: 0;
+				opacity: 0;
+				visibility: hidden;
+
+				&--active {
+					visibility: visible;
+					width: 210px;
+					opacity: 1;
+					font-size: 15px;
+					transition: all .2s;
+				}
+			}
+		}
+
+		.products-hover__img-search {
+			display: none;
+		}
+
+		&-content {
+			text-align: left;
+			order: -1;
+
+		}
+
+		&-img {
+			max-width: 370px;
+			width: 100%;
+			max-height: 500px;
+			justify-content: center;
+			border: 2px solid #f2f2f2;
+			margin-right: 30px;
+			color: #333333;
+		}
+
+		&-title {
+			@extend %rubik-400;
+			font-size: 40px;
+			color: #333333;
+		}
+
+		&-price {
+			@extend %rubik-400;
+			font-size: 30px;
+			color: #333333;
+			line-height: 45px;
+			margin-bottom: 23px;
+		}
+
+		&-text {
+			display: block;
+			@extend %rubik-400;
+			font-size: 16px;
+			line-height: 30px;
+			color: $default-color;
+			margin-bottom: 34px;
+		}
+	}
+
+	.products-star {
+		display: block;
+		margin-bottom: 21px;
+	}
+
+}

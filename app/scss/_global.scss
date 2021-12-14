@@ -130,3 +130,44 @@ button {
 		}
 	}
 }
+
+.pagination {
+	display: flex;
+	justify-content: center;
+
+	&__list {
+		display: flex;
+
+	}
+
+	&__item+.pagination__item {
+		margin-left: 15px;
+	}
+
+	&__link {
+		padding: 0 19px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 50px;
+		height: 50px;
+		@extend %rubik-400;
+		font-size: 16px;
+		border: 1px solid $accent-color;
+		background-color: #ffffff;
+
+		&--active {
+			background-color: $accent-color;
+			color: #ffffff;
+		}
+	}
+
+}
+
+.product-box {
+	padding: 100px 0 120px;
+
+	&__inner {
+		display: flex;
+	}
+}

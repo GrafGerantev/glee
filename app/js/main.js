@@ -1,4 +1,59 @@
 $(function () {
+
+	/* ====================== Появление кнопки добавления в корзину в блоке productsline ========== */
+
+	$('.product-line .products-hover__img-cart').mouseover(function () {
+		$(this).closest('.products-hover').find('.products-hover__btn').addClass('products-hover__btn--active');
+		$(this).closest('.products-hover').find('.products-hover__img-cart').css({
+			"border-bottom-left-radius": "5px",
+			"border-top-left-radius": "5px",
+		});
+	});
+	$('.products-hover__btn').mouseout(function () {
+		$('.products-hover__btn').removeClass('products-hover__btn--active')
+		$('.products-hover__img-cart').css({
+			"border-bottom-left-radius": "0px",
+			"border-top-left-radius": "0px",
+		})
+	});
+
+	/* ==================== Рейтинг ======================= */
+
+	$('.filter-recents__star').rateYo({
+		starWidth: "11px",
+		normalFill: "#d6d6d6",
+		ratedFill: "#ffcc00",
+		readOnly: true
+	});
+
+	$('.products-star').rateYo({
+		starWidth: "16px",
+		normalFill: "#d6d6d6",
+		ratedFill: "#ffcc00",
+		spacing: "13px",
+		readOnly: true
+	});
+
+	/* ===============Filter range */
+
+	$(".filter-price__input").ionRangeSlider({
+		type: "double",
+		prefix: "$",
+		step: 0.01,
+
+		onStart: function (data) {
+			$('.filter-price__from').text(data.from + '.00');
+			$('.filter-price__to').text(data.to + '.00');
+		},
+
+		onChange: function (data) {
+			// Called every time handle position is changed
+			$('.filter-price__from').text(data.from);
+			$('.filter-price__to').text(data.to);
+		},
+	});
+
+	/* ============== Slider ===================== */
 	$('.top-slider__inner').slick({
 		arrows: false,
 		dots: true,
@@ -6,6 +61,8 @@ $(function () {
 		autoplaySpeed: 2000,
 		fade: true,
 	});
+
+	/* =============== Tabs ========================= */
 
 	var mixer = mixitup('.products__items', {
 		selectors: {
@@ -17,6 +74,8 @@ $(function () {
 			target: '.filter2',
 		}
 	});
+
+	/* ================= Video ==================== */
 
 	$('.design__video-link').magnificPopup({
 		disableOn: 700,

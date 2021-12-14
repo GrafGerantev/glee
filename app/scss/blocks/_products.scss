@@ -38,6 +38,7 @@
 			display: flex;
 			align-items: center;
 			height: 100%;
+			order: -1;
 		}
 
 		&-title {
@@ -54,6 +55,14 @@
 		&-price {
 			@extend %dmsans-700;
 			color: $accent-color;
+		}
+
+		&-box {
+			width: 100%
+		}
+
+		&-text {
+			display: none;
 		}
 	}
 
@@ -98,6 +107,10 @@
 		&__img+.products-hover__img {
 			margin-left: 16px;
 		}
+
+		&__btn {
+			display: none;
+		}
 	}
 
 	&__inner {
@@ -139,5 +152,9 @@
 			@extend %rubik-400;
 			color: $btn-link-dark;
 		}
+	}
+
+	&-star {
+		display: none;
 	}
 }
