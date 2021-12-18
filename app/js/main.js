@@ -1,5 +1,9 @@
 $(function () {
 
+	/* ======================== Селект ========================= */
+
+	$('.product-filter__num').styler();
+
 	/* ====================== Появление кнопки добавления в корзину в блоке productsline ========== */
 
 	$('.product-line .products-hover__img-cart').mouseover(function () {
@@ -62,6 +66,22 @@ $(function () {
 		fade: true,
 	});
 
+	$('.product-slide__thumb').slick({
+		asNavFor: '.product-slide__big',
+		focusOnSelect: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		vertical: true,
+		draggable: false
+	});
+
+	$('.product-slide__big').slick({
+		asNavFor: '.product-slide__thumb',
+		arrows: false,
+		draggable: false,
+		fade: true
+	});
+
 	/* =============== Tabs ========================= */
 
 	var mixer = mixitup('.products__items', {
@@ -74,6 +94,7 @@ $(function () {
 			target: '.filter2',
 		}
 	});
+
 
 	/* ================= Video ==================== */
 
