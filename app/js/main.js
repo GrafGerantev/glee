@@ -1,5 +1,16 @@
 $(function () {
 
+	/* ==================== переключение табов =========================== */
+
+	$('.product-tabs__top-item ').on('click', function (e) {
+		e.preventDefault();
+		$('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+		$(this).addClass('product-tabs__top-item--active');
+		$('.product-tabs__item').removeClass('product-tabs__item--active');
+		$($(this).attr('href')).addClass('product-tabs__item--active');
+	})
+
+
 	/* ======================== Селект ========================= */
 
 	$('.product-filter__num').styler();
@@ -80,6 +91,13 @@ $(function () {
 		arrows: false,
 		draggable: false,
 		fade: true
+	});
+
+	$('.related-product__items').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow-next.svg"></button>',
+		prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-prev.svg"></button>'
 	});
 
 	/* =============== Tabs ========================= */

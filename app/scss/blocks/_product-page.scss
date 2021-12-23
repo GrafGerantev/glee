@@ -1,5 +1,5 @@
 .product-page {
-	padding: 120px 0 115px;
+	padding-top: 120px;
 
 	.products-star {
 		display: block;
@@ -214,5 +214,48 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+}
 
+.product-tabs {
+	padding: 100px 0;
+
+	&__top {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 33px;
+
+		&-item {
+			max-width: 242px;
+			width: 100%;
+			text-align: center;
+			padding: 15px 10px;
+			background-color: $top-bg;
+			border-radius: 5px;
+			@extend %rubik-500;
+			color: $default-color;
+			font-size: 18px;
+
+			&+.product-tabs__top-item {
+				margin-left: 12px;
+			}
+
+			&--active {
+				color: #ffffff;
+				background-color: $accent-color;
+			}
+		}
+	}
+
+	&__item {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+
+		&-text {
+			@extend %rubik-400;
+			line-height: 30px;
+		}
+	}
 }
