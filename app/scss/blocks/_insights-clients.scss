@@ -106,6 +106,16 @@
 			padding-bottom: 90px;
 			min-height: 435px;
 		}
+
+		&.insights-clients__content--no-item {
+			margin-top: 0;
+
+			.insights-clients__content-wrapper {
+				min-height: auto;
+				padding-top: 77px;
+			}
+
+		}
 	}
 
 

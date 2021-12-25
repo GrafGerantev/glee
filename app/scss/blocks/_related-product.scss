@@ -20,15 +20,12 @@
 		}
 	}
 
-	/* 	&__wrapper {
-		padding: 59px 15px;
-		margin-left: -15px;
-		overflow: hidden;
-		margin-top: -59px;
-		position: relative;
-
-	} */
 }
+
+.related-product+.insights-clients {
+	padding-top: 56px;
+}
+
 
 .slick-list {
 	overflow: visible;
@@ -55,7 +52,7 @@
 	align-items: center;
 	position: absolute;
 	right: 0;
-	top: -109px;
+	top: -40px;
 
 	&:focus {
 		border-color: $accent-color;

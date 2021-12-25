@@ -155,6 +155,36 @@
 			margin: 10px 0 10px;
 		}
 	}
+
+	&-search {
+		&__form {
+			border: 2px solid $top-bg;
+			display: flex;
+			border-radius: 5px;
+		}
+
+		&__input {
+			width: 222px;
+			height: 40px;
+			border: none;
+			outline: none;
+		}
+
+		&__btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $top-bg;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			width: 48px;
+
+			path {
+				fill: #164a7b;
+
+			}
+		}
+	}
 }
 
 .irs--flat {

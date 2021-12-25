@@ -1,0 +1,42 @@
+.recent-posts {
+	&__item {
+		display: flex;
+		@extend %rubik-400;
+		margin-bottom: 22px;
+
+		&-title {
+			color: #333333;
+			font-size: 14px;
+			line-height: 20px;
+			@extend %rubik-400;
+			margin-bottom: 5px;
+		}
+
+		&-date {
+			font-size: 12px;
+			line-height: 30px;
+			text-transform: uppercase;
+			color: #9a9a9a;
+			padding-left: 20px;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 6px;
+				width: 13px;
+				height: 15px;
+				background-image: url("../images/icons/calendar-regular.svg");
+			}
+		}
+	}
+
+	&__img {
+		width: 71px;
+		height: 71px;
+		display: block;
+		object-fit: cover;
+		margin-right: 20px;
+	}
+}
