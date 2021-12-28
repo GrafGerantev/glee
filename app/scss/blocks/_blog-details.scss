@@ -1,0 +1,136 @@
+.blog-one {
+	&__text {
+		h3 {
+			@extend %rubik-400;
+			font-size: 36px;
+			color: #333333;
+			margin-bottom: 10px;
+		}
+
+		h5 {
+			@extend %rubik-500;
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: 14px;
+		}
+
+		p {
+			@extend %rubik-400;
+			line-height: 30px;
+			margin-bottom: 37px;
+		}
+
+		blockquote {
+			background-color: $top-bg;
+			border-left: 6px solid $accent-color;
+			padding: 20px 30px;
+			@extend %rubik-400;
+			line-height: 30px;
+			margin-bottom: 46px;
+
+			span {
+				display: block;
+				margin-top: 14px;
+				padding-left: 40px;
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					width: 20px;
+					height: 3px;
+					background-color: $accent-color;
+				}
+			}
+		}
+
+		h4 {
+			@extend %rubik-500;
+			font-size: 18px;
+			line-height: 30px;
+			margin-bottom: 16px;
+			padding-top: 23px;
+		}
+	}
+
+	&__img--left {
+		float: left;
+		margin-right: 30px;
+	}
+
+	&__img--right {
+		float: right;
+		margin-left: 30px;
+	}
+
+	&__author {
+		padding: 26px 0;
+		border: 2px solid #ebebeb;
+		border-left: none;
+		border-right: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 60px 0;
+
+		&-info {
+			display: flex;
+			align-items: center;
+		}
+
+		&-img {
+			display: block;
+			width: 76px;
+			height: 76px;
+			margin-right: 30px;
+		}
+
+		&-name {
+			@extend %rubik-500;
+			font-size: 18px;
+			color: #333333;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__box {
+		&-title {
+			@extend %rubik-400;
+			color: #333333;
+			line-height: 26px;
+			padding-right: 16px;
+		}
+	}
+
+	&__tags {
+		margin-bottom: 5px;
+
+		&-link {
+			display: inline-block;
+			@extend %rubik-400;
+			line-height: 26px;
+			color: #999999;
+		}
+	}
+
+	&__share {
+		&-social {
+			display: inline-block;
+			margin-right: 20px;
+
+			path {
+				fill: #a1a1a1;
+				transition: all .3s;
+			}
+
+			&:hover {
+				path {
+					fill: $accent-color;
+				}
+			}
+		}
+	}
+}

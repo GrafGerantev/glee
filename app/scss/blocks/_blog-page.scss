@@ -30,14 +30,6 @@
 			margin-bottom: 34px;
 		}
 
-		&-img {
-			max-width: 830px;
-			width: 100%;
-			height: 501px;
-			object-fit: cover;
-			display: block;
-		}
-
 		&-title {
 			@extend %rubik-400;
 			font-size: 36px;
