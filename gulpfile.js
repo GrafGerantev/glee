@@ -34,6 +34,7 @@ function html() {
 			'app/html/product-page.html',
 			'app/html/blog-page.html',
 			'app/html/blog-details-page.html',
+			'app/html/contact-page.html',
 		])
 		.pipe(fileinclude())
 		.pipe(dest('app/'))

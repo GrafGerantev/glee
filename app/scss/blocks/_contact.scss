@@ -1,0 +1,179 @@
+.contact {
+	padding-top: 115px;
+
+	&__subtitle {
+		@extend %poppins-700;
+		font-size: 16px;
+		line-height: 20px;
+		color: $accent-color;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		@extend %dmsans-700;
+		font-size: 35px;
+		color: $btn-link-dark;
+		text-align: center;
+		margin-bottom: 65px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 30px;
+		margin-bottom: 122px;
+	}
+
+	&__item {
+		padding: 70px 0;
+		background-color: #fbfbfb;
+		border: 3px solid transparent;
+		transition: all .3s;
+		text-align: center;
+
+		&:hover {
+			border-color: $accent-color;
+
+			.contact__item-box {
+				background-color: $accent-color;
+
+				path {
+					fill: #ffffff;
+				}
+			}
+		}
+
+		&-box {
+			width: 80px;
+			height: 80px;
+			background-color: #ffffff;
+			border-radius: 20px;
+			box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto 55px;
+			transition: all .3s;
+
+			path {
+				fill: $accent-color;
+				transition: all .3s;
+			}
+		}
+
+		&-title {
+			@extend %dmsans-700;
+			font-size: 20px;
+			color: #222222;
+			margin-bottom: 20px;
+		}
+
+		&-link {
+			@extend %rubik-400;
+			line-height: 30px;
+			color: #565872;
+		}
+	}
+
+	&__content {
+		display: flex;
+	}
+
+	&-form {
+		max-width: 620px;
+		width: 100%;
+		margin-right: 47px;
+
+		&__box {
+			display: flex;
+			justify-content: space-between;
+
+			&-input {
+				max-width: 300px;
+			}
+
+			&-input,
+			&-textarea {
+				position: relative;
+				width: 100%;
+			}
+
+			&-input,
+			&-textarea {
+				&::before {
+					content: "";
+					position: absolute;
+					right: 30px;
+					top: 17px;
+					background-image: url("../images/icons/comment-contact.svg");
+					width: 18px;
+					height: 15px;
+				}
+			}
+
+			&-input--email {
+				&::before {
+					background-image: url("../images/icons/email-contact.svg");
+					width: 18px;
+					height: 13px;
+				}
+			}
+
+			&-input--name {
+				&::before {
+					background-image: url("../images/icons/name-contact.svg");
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+		&__input,
+		&__textarea {
+			width: 100%;
+			padding: 0 47px 0 20px;
+			border: none;
+			background-color: #fafafa;
+			margin-bottom: 25px;
+			@extend %rubik-400;
+			color: #565872;
+
+			&::placeholder {
+				text-transform: uppercase;
+			}
+		}
+
+		&__input {
+			height: 50px;
+			width: 100%;
+			display: block;
+		}
+
+		&__textarea {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			resize: none;
+			height: 175px;
+		}
+
+		&__btn {
+			padding: 13px 40px;
+			background-color: $accent-color;
+			text-transform: uppercase;
+			color: #ffffff;
+			border-radius: 5px;
+			@extend %poppins-600;
+		}
+	}
+}
+
+.map {
+	max-width: 500px;
+	width: 100%;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
