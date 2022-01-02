@@ -5,18 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Glee</title>
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/contact-page.min.css">
 </head>
 
 <body>
-	@@include('_header.html')
+	{% include 'app/html/_header.html' %}
 	<main class="main">
-		@@include('top/_top-contact.html')
-		@@include('_contact-page.html')
-		@@include('_insights-clients.html')
+	{% include 'app/html/top/_top-contact.html' %}
+	{% include 'app/html/_contact-page.html' %}
+	{% include 'app/html/_insights-clients.html' %}
 	</main>
 
-	@@include('_footer.html')
+	{% include 'app/html/_footer.html' %}
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" defer></script>
 	<script>

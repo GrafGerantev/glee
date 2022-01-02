@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glee</title>
+	<link rel="stylesheet" href="css/product-page.min.css">
+</head>
+
+<body>
+	{% include 'app/html/_header.html' %}
+	<main class="main">
+	{% include 'app/html/top/_top-product-page.html' %}
+	{% include 'app/html/_product-page.html' %}
+	{% include 'app/html/_related-product.html' %}
+	{% include 'app/html/_insights-clients.html' %}
+	</main>
+
+	{% include 'app/html/_footer.html' %}
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -5,17 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Glee</title>
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/terms.min.css">
 </head>
 
 <body>
-	@@include('_header.html')
+	{% include 'app/html/_header.html' %}
 	<main class="main">
-		@@include('top/_top-productgrid.html')
-		@@include('_productgrid.html')
+	{% include 'app/html/top/_top-terms.html' %}
+	{% include 'app/html/_terms.html' %}
+	{% include 'app/html/_insights-clients.html' %}
 	</main>
 
-	@@include('_footer.html')
+	{% include 'app/html/_footer.html' %}
 	<script src="js/main.min.js"></script>
 </body>
 

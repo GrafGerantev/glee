@@ -10,6 +10,8 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename');
+const nunjucksRender = require('gulp-nunjucks-render');
 const del = require('del');
 const fileinclude = require("gulp-file-include");
 const browserSync = require('browser-sync').create();
@@ -23,7 +25,7 @@ function browsersync() {
 	})
 }
 
-function html() {
+/* function html() {
 	return src(['app/html/index.html',
 			'app/html/page.html',
 			'app/html/login.html',
@@ -39,14 +41,23 @@ function html() {
 		.pipe(fileinclude())
 		.pipe(dest('app/'))
 		.pipe(browserSync.stream())
+} */
+
+function nunjucks() {
+	return src('app/pages/*.njk')
+		.pipe(nunjucksRender())
+		.pipe(dest('app'))
+		.pipe(browserSync.stream())
 }
 
 function styles() {
-	return src('app/scss/style.scss')
+	return src('app/scss/*.scss')
 		.pipe(scss({
 			outputStyle: 'compressed'
 		}))
-		.pipe(concat('style.min.css'))
+		.pipe(rename({
+			suffix: '.min'
+		}))
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 10 versions'],
 			grid: true
@@ -114,19 +125,21 @@ function cleanDist() {
 }
 
 function watching() {
-	watch(['app/html/*.html'], html);
+	/* 	watch(['app/html/*.html'], html); */
+	watch(['app/pages/*.njk'], nunjucks);
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
-exports.html = html;
+/* exports.html = html; */
 exports.styles = styles;
 exports.scripts = scripts;
 browsersync.scripts = browsersync;
 exports.images = images;
+exports.nunjucks = nunjucks;
 exports.watching = watching;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(html, styles, scripts, browsersync, watching)
+exports.default = parallel( /* html, */ nunjucks, styles, scripts, browsersync, watching)
