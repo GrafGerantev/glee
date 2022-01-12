@@ -48,6 +48,7 @@
 		text-transform: uppercase;
 		margin-top: 16px;
 		margin-bottom: 25px;
+		pointer-events: none;
 	}
 
 	&__item-text {
@@ -128,5 +129,50 @@
 
 	&__link {
 		color: $footer-color;
+	}
+}
+
+@media (max-width: 1050px) {
+	.footer {
+		&-top {
+			flex-wrap: wrap;
+
+			&__item-content {
+				width: 100%;
+			}
+
+			&__form-input {
+				max-width: 340px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	.footer-top {
+		flex-direction: column;
+
+		&__contact {
+			width: 100%;
+		}
+
+		&__item-nav {
+			margin-right: 50px;
+
+		}
+
+		&__title {
+			pointer-events: auto;
+			cursor: pointer;
+		}
+
+		&__list {
+			display: none;
+		}
+
+		&__item-text {
+			display: none;
+		}
 	}
 }

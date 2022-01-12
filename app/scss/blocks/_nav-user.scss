@@ -1,6 +1,8 @@
 .nav-user {
 	display: flex;
 	align-items: center;
+	position: relative;
+	z-index: 10;
 
 	&__search {
 		width: 51px;
@@ -55,4 +57,24 @@
 		font-size: 10px;
 	}
 
+}
+
+@media (max-width: 1024px) {
+	.nav-user {
+		&__btn {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.nav-user {
+		width: 100%;
+		margin-top: 20px;
+		justify-content: flex-end;
+
+		&__box {
+			margin-right: 0;
+		}
+	}
 }

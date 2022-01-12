@@ -1,5 +1,18 @@
 $(function () {
 
+	/* ==================== Выпадающее меню =========================== */
+
+	$('.menu__btn').on('click', function () {
+		$('.menu__list').toggleClass('menu__list--active');
+	});
+
+	/* ==================== Выпадающее список в footer =========================== */
+
+	$('.footer-top__title').on('click', function () {
+		$(this).next().slideToggle();
+		$(this).toggleClass('footer-top__title--active');
+	})
+
 	/* ==================== переключение табов =========================== */
 
 	$('.product-tabs__top-item ').on('click', function (e) {
