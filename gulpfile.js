@@ -25,10 +25,10 @@ function browsersync() {
 	})
 }
 
-function html() {
-	return src('app/html/**/*.html')
+/* function html() {
+	return src('app/html/*.html')
 		.pipe(browserSync.stream())
-}
+} */
 
 function nunjucks() {
 	return src('app/pages/*.njk')
@@ -112,14 +112,15 @@ function cleanDist() {
 }
 
 function watching() {
-	watch(['app/html/**/*.html'], html); 
+	//watch(['app/html/**/*.html'], html); 
 	watch(['app/pages/*.njk'], nunjucks);
+	watch(['app/html/**/*.html'], nunjucks);
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
-exports.html = html;
+/* exports.html = html; */
 exports.styles = styles;
 exports.scripts = scripts;
 browsersync.scripts = browsersync;
@@ -129,4 +130,4 @@ exports.watching = watching;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel( html, nunjucks, styles, scripts, browsersync, watching)
+exports.default = parallel(nunjucks, styles, scripts, browsersync, watching)
