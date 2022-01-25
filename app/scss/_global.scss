@@ -243,3 +243,22 @@ button {
 	display: block;
 
 }
+
+@media (max-width: 520px) {
+	.title {
+		font-size: 26px;
+	}
+
+	.filter {
+		flex-direction: column;
+		align-items: center;
+
+		&__btn {
+			margin-bottom: 20px;
+		}
+
+		&__btn+.filter__btn {
+			margin-left: 0;
+		}
+	}
+}

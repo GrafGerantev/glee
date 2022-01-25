@@ -15,6 +15,7 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const del = require('del');
 const fileinclude = require("gulp-file-include");
 const browserSync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps');
 
 function browsersync() {
 	browserSync.init({
@@ -39,6 +40,7 @@ function nunjucks() {
 
 function styles() {
 	return src('app/scss/*.scss')
+		.pipe(sourcemaps.init())
 		.pipe(scss({
 			outputStyle: 'compressed'
 		}))
@@ -49,6 +51,7 @@ function styles() {
 			overrideBrowserslist: ['last 10 versions'],
 			grid: true
 		}))
+		.pipe(sourcemaps.write('.'))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
 }
