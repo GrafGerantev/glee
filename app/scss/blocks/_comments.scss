@@ -1,11 +1,14 @@
 .comments {
 	margin-bottom: 85px;
+	max-width: 830px;
 
 	&__title {
 		margin-bottom: 55px;
 	}
 
 	&-form {
+		max-width: 830px;
+
 		&__title {
 			margin-bottom: 44px;
 		}
@@ -174,19 +177,30 @@
 	}
 }
 
-.tess-input {
-	position: relative;
-	display: inline-block;
+@media (max-width: 520px) {
+	.comment {
+		&__img {
+			display: none;
+		}
+	}
 
-	&::before {
-		content: "";
-		position: absolute;
-		right: 0;
-		top: 0;
-		/* background-image: url("../images/icons/comment.svg"); */
-		width: 18px;
-		height: 15px;
-		background-color: red;
-		z-index: 10;
+	.comments {
+		margin-bottom: 60px;
+
+		&-form {
+			&__box-input {
+				flex-direction: column;
+				margin-bottom: 0;
+			}
+
+			&__input {
+				margin-bottom: 20px;
+				max-width: 100%;
+			}
+		}
+
+		&__title {
+			margin-bottom: 40px;
+		}
 	}
 }

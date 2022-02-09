@@ -67,3 +67,11 @@
 		}
 	}
 }
+
+@media (max-width: 375px) {
+	.modal {
+		&__content {
+			display: block;
+		}
+	}
+}

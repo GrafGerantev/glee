@@ -257,3 +257,182 @@
 		}
 	}
 }
+
+@media (max-width: 1160px) {
+	.about {
+		&-content {
+			&__item {
+				padding-right: 22px;
+
+				&::after {
+					display: none;
+				}
+			}
+
+			&__info {
+				padding-top: 0;
+			}
+		}
+
+		&__img {
+			height: 100%;
+			max-width: 40%;
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	.about {
+		&-team {
+			&__inner {
+				flex-direction: column;
+			}
+
+			&__content {
+				max-width: 100%;
+				margin-bottom: 40px;
+			}
+
+			&__items {
+				max-width: 100%;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 30px;
+			}
+
+			&__item {
+				max-width: 100%;
+			}
+
+			&__img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	.about {
+		padding-top: 60px;
+
+		&-content {
+			padding-left: 0;
+
+			&__info {
+				&-num {
+					font-size: 114px;
+				}
+
+				&-content {
+					padding-top: 15px;
+				}
+			}
+
+			&__box {
+				padding-bottom: 40px;
+
+				&::after {
+					max-width: 100%;
+				}
+			}
+		}
+
+		&__inner {
+			flex-direction: column;
+			margin-bottom: 60px;
+		}
+
+		&__img {
+			margin-bottom: 20px;
+			height: 500px;
+			max-width: 100%;
+			object-fit: cover;
+			margin-right: 0;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 860px) {
+	.about {
+		&-services {
+			padding: 60px 0;
+
+			&__items {
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			&__item {
+				margin: 20px 50px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.about {
+		&-team {
+			&__items {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.about {
+		&-services {
+			&__item {
+				margin: 20px 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.about {
+		&__title {
+			font-size: 26px;
+		}
+
+		&-content {
+			&__items {
+				flex-direction: column;
+			}
+
+			&__item {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__img {
+			height: 400px;
+		}
+
+		&-services {
+			&__items {
+				flex-direction: column;
+			}
+		}
+
+		&-team {
+			&__item {
+				&-content {
+					padding: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.about {
+		&__img {
+			height: 330px;
+		}
+	}
+}
