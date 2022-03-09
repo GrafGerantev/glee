@@ -1,5 +1,15 @@
 $(function () {
 
+	/* ==================== Выпадающий фильтр =========================== */
+
+	$('.filter__products-btn').on('click', function () {
+		$('.filter-box').slideToggle();
+		const scrolled = $(window).scrollTop() + 20;
+		$('.filter-box').css('top', scrolled);
+	})
+
+
+
 	/* ==================== Выпадающее меню =========================== */
 
 	$('.menu__btn').on('click', function () {
@@ -30,21 +40,21 @@ $(function () {
 
 	/* ====================== Появление кнопки добавления в корзину в блоке productsline ========== */
 
-	$('.product-line .products-hover__img-cart').mouseover(function () {
-		$(this).closest('.products-hover').find('.products-hover__btn').addClass('products-hover__btn--active');
-		$(this).closest('.products-hover').find('.products-hover__img-cart').css({
-			"border-bottom-left-radius": "5px",
-			"border-top-left-radius": "5px",
+	/* 	$('.product-line .products-hover__img-cart').mouseover(function () {
+			$(this).closest('.products-hover').find('.products-hover__btn').addClass('products-hover__btn--active');
+			$(this).closest('.products-hover').find('.products-hover__img-cart').css({
+				"border-bottom-left-radius": "5px",
+				"border-top-left-radius": "5px",
+			});
 		});
-	});
-	$('.products-hover__btn').mouseout(function () {
-		$('.products-hover__btn').removeClass('products-hover__btn--active')
-		$('.products-hover__img-cart').css({
-			"border-bottom-left-radius": "0px",
-			"border-top-left-radius": "0px",
-		})
-	});
-
+		$('.products-hover__btn').mouseout(function () {
+			$('.products-hover__btn').removeClass('products-hover__btn--active')
+			$('.products-hover__img-cart').css({
+				"border-bottom-left-radius": "0px",
+				"border-top-left-radius": "0px",
+			})
+		});
+	 */
 	/* ==================== Рейтинг ======================= */
 
 	$('.filter-recents__star').rateYo({
@@ -103,14 +113,39 @@ $(function () {
 		asNavFor: '.product-slide__thumb',
 		arrows: false,
 		draggable: false,
-		fade: true
+		fade: true,
+		responsive: [{
+			breakpoint: 1201,
+			settings: {
+				draggable: true,
+			}
+		}, ]
 	});
 
 	$('.related-product__items').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow-next.svg"></button>',
-		prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-prev.svg"></button>'
+		prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-prev.svg"></button>',
+		responsive: [{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 951,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 601,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 
 	/* =============== Tabs ========================= */

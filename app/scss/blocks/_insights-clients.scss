@@ -177,3 +177,11 @@
 		}
 	}
 }
+
+@media (max-width: 520px) {
+	.insights-clients {
+		&__more {
+			display: none;
+		}
+	}
+}

@@ -67,6 +67,28 @@
 				path {
 					fill: #ffffff;
 				}
+
+				span {
+					display: block;
+					opacity: 0;
+					width: 0;
+					color: #ffffff;
+				}
+
+				&:hover {
+					width: 160px;
+
+					svg {
+						display: none;
+					}
+
+					span {
+						width: 100%;
+						opacity: 1;
+						text-align: center;
+						animation: showDiv .1s forwards;
+					}
+				}
 			}
 
 			&__btn {
@@ -153,6 +175,90 @@
 		&-wrapper {
 			min-height: auto;
 			padding-top: 77px;
+		}
+	}
+}
+
+@keyframes showDiv {
+
+	0%,
+	99% {
+		width: 0px;
+		opacity: 0;
+	}
+
+	100% {
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+@media (max-width: 950px) {
+	.product-line {
+		.products {
+			&__item {
+				height: 390px;
+
+				&-img {
+					max-width: 320px;
+					max-height: 390px;
+
+					img {
+						max-width: 60%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.product-line {
+		.products {
+			&__item {
+				flex-direction: column;
+				height: auto;
+
+				&-img {
+					max-height: 100%;
+					height: 400px;
+					margin-bottom: 20px;
+					margin-right: 0;
+
+					img {
+						max-width: 80%;
+					}
+				}
+
+				&-title {
+					font-size: 30px;
+					text-align: center;
+				}
+
+				&-price {
+					font-size: 28px;
+					line-height: 30px;
+					margin-bottom: 12px;
+					text-align: center;
+				}
+			}
+
+			&-star {
+				margin: 0 auto 10px auto;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.product-line {
+		.products {
+			&__item {
+
+				&-img {
+					height: 350px;
+				}
+			}
 		}
 	}
 }

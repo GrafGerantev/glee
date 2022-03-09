@@ -62,3 +62,41 @@
 .slick-prev {
 	right: 68px;
 }
+
+@media (max-width: 1200px) {
+	.related-product {
+		&__items {
+			.slick-slide {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	.related-product {
+		.products {
+			&__item {
+				max-width: 320px;
+			}
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.related-product {
+		.products {
+			&__item {
+				max-width: 270px;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.related-product {
+		.slick-arrow {
+			display: none !important;
+		}
+	}
+}

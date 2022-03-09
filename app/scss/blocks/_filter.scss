@@ -185,6 +185,25 @@
 			}
 		}
 	}
+
+	&__products {
+		&-btn {
+			display: none;
+			position: fixed;
+			right: 0;
+			bottom: 30px;
+			width: 60px;
+			height: 60px;
+			background-color: $accent-color;
+			padding: 0;
+			border: none;
+			z-index: 101;
+
+			svg {
+				fill: #ffffff;
+			}
+		}
+	}
 }
 
 .irs--flat {
@@ -221,4 +240,30 @@
 
 .irs--flat .irs-handle>i:first-child {
 	display: none;
+}
+
+@media (max-width: 1200px) {
+	.filter {
+		&__products {
+			&-btn {
+				display: block;
+			}
+		}
+
+		&-recents {
+			display: none;
+		}
+
+		&-box {
+			display: none;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 20px;
+			background-color: #ffffff;
+			z-index: 100;
+			margin-right: 0;
+			padding: 15px 15px;
+		}
+	}
 }

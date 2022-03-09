@@ -244,6 +244,20 @@ button {
 
 }
 
+@media (max-width: 1200px) {
+	.product-box {
+		&__inner {
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	.product-box {
+		padding: 60px 0;
+	}
+}
+
 @media (max-width: 520px) {
 	.title {
 		font-size: 26px;

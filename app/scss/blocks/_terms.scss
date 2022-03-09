@@ -57,3 +57,18 @@
 .terms+section {
 	padding-top: 10px;
 }
+
+@media (max-width: 450px) {
+	.terms {
+		padding-top: 60px;
+
+		&__content {
+			margin-bottom: 40px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+}
